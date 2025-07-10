@@ -1,57 +1,58 @@
+/* Base Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
-  background: #f4f4f4;
+  padding: 0;
+  background-color: #f8f9fa;
   color: #222;
+  animation: fadeInUp 1s ease-out;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
+
 header {
   background: #006400;
   color: white;
   padding: 1em;
   text-align: center;
+  animation: fadeInUp 1s ease-out;
 }
+
 nav {
   background: #004d17;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
+
 nav a {
   color: white;
   padding: 1em;
   text-decoration: none;
 }
+
 nav a:hover {
   background: #007a2e;
 }
+
 section {
   padding: 2em;
   max-width: 900px;
-  margin: auto;
+  margin: 1em auto;
   background: white;
-  margin-top: 1em;
   border-radius: 8px;
+  animation: fadeInUp 1s ease-out;
 }
+
 footer {
   background: #003a11;
   color: white;
   text-align: center;
   padding: 1em;
   margin-top: 2em;
+  animation: fadeInUp 1s ease-out;
 }
-.gallery {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.gallery img {
-  width: 300px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 6px;
-}
-/* Animation & Responsive Enhancements */
+
+/* Animation */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -63,70 +64,47 @@ footer {
   }
 }
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
-  animation: fadeInUp 1s ease-out;
-  background-color: #f8f9fa;
-}
-
-section, header, footer {
-  animation: fadeInUp 1s ease-out;
-  padding: 20px;
-  margin-bottom: 20px;
-}
-
-/* Responsive navbar */
+/* Responsive Nav */
 @media screen and (max-width: 768px) {
   header {
     flex-direction: column;
     align-items: flex-start;
   }
-  header nav ul {
+
+  nav {
     flex-direction: column;
-    gap: 10px;
+    align-items: flex-start;
   }
-}
 
-/* Page transitions */
-body {
-  transition: background-color 0.5s ease, color 0.5s ease;
-}
-
-/* Mobile menu */
-header nav ul {
-  display: flex;
-  flex-wrap: wrap;
-}
-header nav .menu-toggle {
-  display: none;
-  font-size: 26px;
-  color: white;
-  cursor: pointer;
-}
-@media screen and (max-width: 768px) {
-  header nav ul {
-    display: none;
-    flex-direction: column;
+  nav a {
+    display: block;
     width: 100%;
   }
-  header nav ul.show {
-    display: flex;
-  }
-  header nav .menu-toggle {
+
+  .menu-toggle {
     display: block;
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+    margin: 0.5em;
   }
 }
 
-/* Dark mode */
+/* Mobile Menu (initially hidden) */
+.menu-toggle {
+  display: none;
+}
+
+/* Dark Mode */
 body.dark-mode {
   background-color: #121212;
   color: #ffffff;
 }
+
 body.dark-mode header {
   background-color: #1e1e1e;
 }
+
 body.dark-mode a {
   color: #90caf9;
 }
