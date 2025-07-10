@@ -1,29 +1,35 @@
+/* Base Styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   background: #f4f4f4;
   color: #222;
 }
+
 header {
   background: #006400;
   color: white;
   padding: 1em;
   text-align: center;
 }
+
 nav {
   background: #004d17;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
+
 nav a {
   color: white;
   padding: 1em;
   text-decoration: none;
 }
+
 nav a:hover {
   background: #007a2e;
 }
+
 section {
   padding: 2em;
   max-width: 900px;
@@ -32,6 +38,7 @@ section {
   margin-top: 1em;
   border-radius: 8px;
 }
+
 footer {
   background: #003a11;
   color: white;
@@ -39,15 +46,15 @@ footer {
   padding: 1em;
   margin-top: 2em;
 }
-.gallery {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.gallery img {
-  width: 300px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 6px;
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav a {
+    width: 100%;
+    text-align: center;
+  }
 }
