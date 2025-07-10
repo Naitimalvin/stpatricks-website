@@ -51,3 +51,82 @@ footer {
   object-fit: cover;
   border-radius: 6px;
 }
+/* Animation & Responsive Enhancements */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  animation: fadeInUp 1s ease-out;
+  background-color: #f8f9fa;
+}
+
+section, header, footer {
+  animation: fadeInUp 1s ease-out;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Responsive navbar */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  header nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Page transitions */
+body {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Mobile menu */
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+header nav .menu-toggle {
+  display: none;
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  header nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+  header nav ul.show {
+    display: flex;
+  }
+  header nav .menu-toggle {
+    display: block;
+  }
+}
+
+/* Dark mode */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+body.dark-mode header {
+  background-color: #1e1e1e;
+}
+body.dark-mode a {
+  color: #90caf9;
+}
