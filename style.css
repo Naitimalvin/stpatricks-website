@@ -1,19 +1,19 @@
 /* === Global Styles === */
 :root {
   --primary: #006400;
-  --secondary: #00b894;
-  --accent: #ffeaa7;
-  --bg: #f0f4f8;
-  --dark: #2d3436;
+  --secondary: #007a2e;
+  --accent: #e9f5e9;
+  --bg: #f4f4f4;
+  --text: #222;
   --light: #ffffff;
-  --gradient: linear-gradient(135deg, #00b894, #55efc4);
+  --gradient: linear-gradient(135deg, #006400, #228b22);
 }
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   background: var(--bg);
-  color: var(--dark);
+  color: var(--text);
   line-height: 1.6;
   scroll-behavior: smooth;
 }
@@ -35,7 +35,7 @@ nav {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 1.2em;
+  gap: 1em;
   margin-top: 1em;
 }
 
@@ -45,13 +45,13 @@ nav a {
   text-decoration: none;
   padding: 0.6em 1.2em;
   border-radius: 30px;
-  transition: all 0.3s ease-in-out;
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
+  transition: background 0.3s, color 0.3s;
 }
 
 nav a:hover {
   background: var(--accent);
-  color: var(--dark);
+  color: var(--primary);
 }
 
 /* === Section Styling === */
@@ -62,12 +62,12 @@ section {
   max-width: 1000px;
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  animation: fadeIn 1s ease;
+  animation: fadeIn 0.7s ease;
 }
 
 /* === Footer === */
 footer {
-  background: var(--dark);
+  background: var(--primary);
   color: white;
   text-align: center;
   padding: 2em;
@@ -99,16 +99,16 @@ input, textarea, select {
   font-size: 1em;
 }
 
-/* === Image Frames === */
+/* === Image Styling === */
 img {
   max-width: 100%;
-  border-radius: 12px;
+  border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
 }
 
 img:hover {
-  transform: scale(1.03);
+  transform: scale(1.02);
 }
 
 /* === Animations === */
@@ -124,14 +124,13 @@ img:hover {
     align-items: center;
   }
 
+  nav a {
+    width: 80%;
+    text-align: center;
+  }
+
   section {
     margin: 1em;
     padding: 1.2em;
-  }
-
-  nav a {
-    display: block;
-    width: 80%;
-    text-align: center;
   }
 }
