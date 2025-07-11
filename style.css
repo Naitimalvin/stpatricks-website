@@ -6,6 +6,7 @@
   --bg: #f4f4f4;
   --text: #222;
   --light: #ffffff;
+  --navtext: #caffbf; /* Bright mint green */
   --gradient: linear-gradient(135deg, #006400, #228b22);
 }
 
@@ -40,7 +41,7 @@ nav {
 }
 
 nav a {
-  color: white;
+  color: var(--navtext);
   font-weight: bold;
   text-decoration: none;
   padding: 0.6em 1.2em;
