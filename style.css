@@ -1,15 +1,16 @@
-/* === Global Styles === */
+/* === Global Variables === */
 :root {
-  --primary: #006400;
-  --secondary: #007a2e;
-  --accent: #e9f5e9;
-  --bg: #f4f4f4;
-  --text: #222;
-  --light: #ffffff;
-  --navtext: #caffbf; /* Bright mint green */
-  --gradient: linear-gradient(135deg, #006400, #228b22);
+  --primary: #00b894;        /* soft green-blue */
+  --secondary: #55efc4;      /* lighter teal */
+  --accent: #d0f8ce;         /* soft mint */
+  --bg: #f0f4f8;
+  --text: #1a1a1a;           /* bright black */
+  --white: #ffffff;
+  --navtext: #1a1a1a;        /* navbar bright black */
+  --gradient: linear-gradient(135deg, #00b894, #55efc4);
 }
 
+/* === Base Styles === */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
@@ -46,7 +47,7 @@ nav a {
   text-decoration: none;
   padding: 0.6em 1.2em;
   border-radius: 30px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.3);
   transition: background 0.3s, color 0.3s;
 }
 
@@ -55,7 +56,7 @@ nav a:hover {
   color: var(--primary);
 }
 
-/* === Section Styling === */
+/* === Sections === */
 section {
   background: white;
   margin: 2em auto;
@@ -75,7 +76,7 @@ footer {
   margin-top: 3em;
 }
 
-/* === Buttons and Forms === */
+/* === Buttons & Forms === */
 button, .btn {
   background: var(--primary);
   color: white;
@@ -112,13 +113,13 @@ img:hover {
   transform: scale(1.02);
 }
 
-/* === Animations === */
+/* === Animation === */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* === Responsive Design === */
+/* === Responsive === */
 @media screen and (max-width: 768px) {
   nav {
     flex-direction: column;
